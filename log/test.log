@@ -1,0 +1,270 @@
+  [1m[36m (123.6ms)[0m  [1mDROP DATABASE IF EXISTS "schema_parser_test"[0m
+  [1m[35m (371.8ms)[0m  CREATE DATABASE "schema_parser_test" ENCODING = 'utf8' OWNER = "postgres"
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (18.5ms)[0m  CREATE TABLE "parsings" ("id" serial primary key, "name" character varying, "schema_attachment_file_name" character varying, "schema_attachment_content_type" character varying, "schema_attachment_file_size" integer, "schema_attachment_updated_at" timestamp, "xml_attachment_file_name" character varying, "xml_attachment_content_type" character varying, "xml_attachment_file_size" integer, "xml_attachment_updated_at" timestamp, "snapshot" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150222145241')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/Users/Pro/projects/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/var/folders/g2/dx6xkpjj219fp0jmvwqmm1kr0000gn/T/c9550d5fad73447fc24ba47f95d1c6b720150224-31680-1rz3qm9.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/var/folders/g2/dx6xkpjj219fp0jmvwqmm1kr0000gn/T/c9550d5fad73447fc24ba47f95d1c6b720150224-31680-1vnwduq.txt'
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "dolor"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 08:45:14.802919"], ["created_at", "2015-02-24 08:45:14.850598"], ["updated_at", "2015-02-24 08:45:14.850598"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/Users/Pro/projects/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/var/folders/g2/dx6xkpjj219fp0jmvwqmm1kr0000gn/T/c9550d5fad73447fc24ba47f95d1c6b720150224-31691-1of66l7.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/var/folders/g2/dx6xkpjj219fp0jmvwqmm1kr0000gn/T/c9550d5fad73447fc24ba47f95d1c6b720150224-31691-22zeho.txt'
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "est"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 08:45:47.261806"], ["created_at", "2015-02-24 08:45:47.311613"], ["updated_at", "2015-02-24 08:45:47.311613"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (115.8ms)[0m  [1mDROP DATABASE IF EXISTS "schema_parser_test"[0m
+  [1m[35m (695.4ms)[0m  CREATE DATABASE "schema_parser_test" ENCODING = 'utf8' OWNER = "postgres"
+  [1m[36mSQL (0.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (20.5ms)[0m  CREATE TABLE "parsings" ("id" serial primary key, "name" character varying, "schema_attachment_file_name" character varying, "schema_attachment_content_type" character varying, "schema_attachment_file_size" integer, "schema_attachment_updated_at" timestamp, "xml_attachment_file_name" character varying, "xml_attachment_content_type" character varying, "xml_attachment_file_size" integer, "xml_attachment_updated_at" timestamp, "snapshot" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (9.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150222145241')
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-8728-1vr3d0n.txt'
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-8728-ls03z8.txt'
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "nisi"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 13:44:24.540881"], ["created_at", "2015-02-24 13:44:24.607367"], ["updated_at", "2015-02-24 13:44:24.607367"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-8774-1uva0ow.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-8774-1jwrauy.txt'
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "soluta"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 13:45:03.228800"], ["created_at", "2015-02-24 13:45:03.287875"], ["updated_at", "2015-02-24 13:45:03.287875"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-8855-zjww6y.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-8855-1mqtul0.txt'
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "qui"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 13:47:01.585339"], ["created_at", "2015-02-24 13:47:01.654381"], ["updated_at", "2015-02-24 13:47:01.654381"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9006-f3871w.txt'
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9006-1lwxh5n.txt'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "natus"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 13:53:44.016080"], ["created_at", "2015-02-24 13:53:44.085031"], ["updated_at", "2015-02-24 13:53:44.085031"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9006-1ujihr9.txt'
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9006-12sulmx.txt'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "rerum"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 13:53:44.129350"], ["created_at", "2015-02-24 13:53:44.180507"], ["updated_at", "2015-02-24 13:53:44.180507"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9281-1dxf6v3.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9281-1v2gqe5.txt'
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "vel"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:08:23.568116"], ["created_at", "2015-02-24 14:08:23.638838"], ["updated_at", "2015-02-24 14:08:23.638838"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9281-msegyc.txt'
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9281-1gs7ujp.txt'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "hic"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:08:26.859731"], ["created_at", "2015-02-24 14:08:26.932899"], ["updated_at", "2015-02-24 14:08:26.932899"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9357-1meb7fa.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9357-1v4ifrm.txt'
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "aut"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:11:30.984257"], ["created_at", "2015-02-24 14:11:31.054617"], ["updated_at", "2015-02-24 14:11:31.054617"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9357-1se9v32.txt'
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9357-17p202x.txt'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "ipsa"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:11:31.116531"], ["created_at", "2015-02-24 14:11:31.184241"], ["updated_at", "2015-02-24 14:11:31.184241"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9497-e35htu.txt'
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9497-ts7rf.txt'
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "vero"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:17:23.444079"], ["created_at", "2015-02-24 14:17:23.507537"], ["updated_at", "2015-02-24 14:17:23.507537"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9497-tw42w5.txt'
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9497-18a9qyn.txt'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "vero"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:17:23.569661"], ["created_at", "2015-02-24 14:17:23.625987"], ["updated_at", "2015-02-24 14:17:23.625987"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9542-e5nsb0.txt'
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9542-mo7ac9.txt'
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "aspernatur"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:19:21.484518"], ["created_at", "2015-02-24 14:19:21.558570"], ["updated_at", "2015-02-24 14:19:21.558570"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9542-1rkvpy8.txt'
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9542-nwxe9.txt'
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "quis"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:19:21.617050"], ["created_at", "2015-02-24 14:19:21.680660"], ["updated_at", "2015-02-24 14:19:21.680660"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9581-14uiesx.txt'
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9581-xd8xdd.txt'
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "natus"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:20:46.009302"], ["created_at", "2015-02-24 14:20:46.078584"], ["updated_at", "2015-02-24 14:20:46.078584"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9581-vzo5ug.txt'
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-9581-1jrb58t.txt'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "quas"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 14:20:46.150920"], ["created_at", "2015-02-24 14:20:46.221430"], ["updated_at", "2015-02-24 14:20:46.221430"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11099-3s0xgx.txt'
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11099-1vl6jau.txt'
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "quaerat"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:00:32.327929"], ["created_at", "2015-02-24 16:00:32.387493"], ["updated_at", "2015-02-24 16:00:32.387493"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11123-1gnq71f.txt'
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11123-1v9vtkc.txt'
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "voluptatem"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:01:16.729108"], ["created_at", "2015-02-24 16:01:16.798935"], ["updated_at", "2015-02-24 16:01:16.798935"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11152-1skxdav.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11152-1xz36n4.txt'
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "excepturi"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:02:09.349289"], ["created_at", "2015-02-24 16:02:09.417852"], ["updated_at", "2015-02-24 16:02:09.417852"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11152-ckikxg.txt'
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11152-gv3ktm.txt'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "vitae"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:02:09.482189"], ["created_at", "2015-02-24 16:02:09.543407"], ["updated_at", "2015-02-24 16:02:09.543407"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11320-110gwqo.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11320-zhv4d7.txt'
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "voluptate"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:10:51.900785"], ["created_at", "2015-02-24 16:10:51.963784"], ["updated_at", "2015-02-24 16:10:51.963784"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11320-5hpef5.txt'
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11320-1jsefa7.txt'
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "sunt"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:10:52.031918"], ["created_at", "2015-02-24 16:10:52.080232"], ["updated_at", "2015-02-24 16:10:52.080232"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11320-1aqnbbt.txt'
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11320-1ud344j.txt'
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "dolorem"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:10:52.135865"], ["created_at", "2015-02-24 16:10:52.195690"], ["updated_at", "2015-02-24 16:10:52.195690"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11360-j5dsaq.txt'
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11360-1wjykh4.txt'
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "minus"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:11:50.833004"], ["created_at", "2015-02-24 16:11:50.899896"], ["updated_at", "2015-02-24 16:11:50.899896"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11360-1m5dg7e.txt'
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11360-latqa1.txt'
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["snapshot", nil], ["name", "doloremque"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:11:50.963172"], ["created_at", "2015-02-24 16:11:51.012656"], ["updated_at", "2015-02-24 16:11:51.012656"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/home/igor/my_works/test_projekt/schema_parser.1/schema_parser/lib/support/schema.txt'
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11360-12bd4v9.txt'
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+Command :: file -b --mime '/tmp/c9550d5fad73447fc24ba47f95d1c6b720150224-11360-1vyctai.txt'
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "parsings" ("snapshot", "name", "schema_attachment_file_name", "schema_attachment_content_type", "schema_attachment_file_size", "schema_attachment_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["snapshot", nil], ["name", "perspiciatis"], ["schema_attachment_file_name", "schema.txt"], ["schema_attachment_content_type", "text/plain"], ["schema_attachment_file_size", 4761], ["schema_attachment_updated_at", "2015-02-24 16:11:51.070883"], ["created_at", "2015-02-24 16:11:51.134507"], ["updated_at", "2015-02-24 16:11:51.134507"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK

@@ -1,0 +1,13 @@
+= form_for @parsing do |f|
+  .row
+    .col-md-2= f.label :name
+    .col-md-6= f.text_field :name
+  .row
+    .col-md-2= f.label :schema_attachment
+    .col-md-6= f.file_field :schema_attachment
+  .row
+    .col-md-2= f.label :xml_attachment
+    .col-md-6= f.file_field :xml_attachment
+  .row
+    .col-md-8
+      = f.submit 'Parse', class: 'btn btn-primary'

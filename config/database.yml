@@ -1,0 +1,20 @@
+default: &default
+  user: postgres
+  owner: postgres
+  password: postgres
+  adapter: postgresql
+  min_messages: WARNING
+
+development:
+  <<: *default
+  database: schema_parser_development
+  adapter: postgresql
+
+test:
+  <<: *default
+  database: schema_parser_test
+  adapter: postgresql
+
+production:
+  <<: *default
+  database: schema_parser_production
