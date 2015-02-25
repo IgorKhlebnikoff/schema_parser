@@ -5,12 +5,12 @@ module Parsers
         @string = string
       end
 
-      def table
-        string.scan(/([a-z_]{1,30})/)
+      def splited_table
+        string.scan(/[a-z_]{1,30}/)
       end
 
       def table_name
-        table[0][0]
+        splited_table.first
       end
 
       private
