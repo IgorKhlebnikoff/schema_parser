@@ -4,7 +4,7 @@ class Parsing < ActiveRecord::Base
 
   validates :name, presence: true
   validates_attachment_content_type :schema_attachment, content_type: 'text/plain'
-  validates_attachment_content_type :xml_attachment, content_type: 'text/xml'
+  validates_attachment_content_type :xml_attachment, content_type: 'application/xml'
 
   serialize :snapshot, Hash
 
