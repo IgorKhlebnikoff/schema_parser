@@ -8,11 +8,14 @@
     h3 Diffs
 - if @parsing.snapshot.present?
   .row
-    .col-md-4= @parsing.schema_attachment_file_name
-    .col-md-4= @parsing.xml_attachment_file_name
+    .col-md-4
+      h4= @parsing.schema_attachment_file_name
+    .col-md-4
+      h4= @parsing.xml_attachment_file_name
   .row
-    .col-md-4
-    .col-md-4
+    = render 'parsed_attachment', collection: @parsing.snapshot[:schema]
+    = render 'parsed_attachment', collection: @parsing.snapshot[:xml]
+    = render 'diffs'
 - else
   p= "#{@parsing.name} is not parsed yet. Would you like to parse it now?"
   = link_to 'Parse', parse_parsing_path(@parsing), class: 'btn btn-primary'
