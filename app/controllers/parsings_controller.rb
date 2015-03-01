@@ -12,16 +12,16 @@ class ParsingsController < ApplicationController
   end
 
   def create
-    #binding.pry
     respond_with(@parsing = Parsing.create(parsing_params))
   end
 
   def destroy
-    respond_with(parsing)
+    respond_with(parsing.destroy, location: root_path)
   end
 
   def parse
-    respond_with(parsing.parse, location: parsing_path(parsing))
+    parsing.parse!
+    redirect_to request.referrer
   end
 
   private

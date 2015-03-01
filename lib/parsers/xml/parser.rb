@@ -9,6 +9,7 @@ module Parsers
 
       def parse
         fetch_tables(hashed_data)
+        @tables
       end
 
       private
