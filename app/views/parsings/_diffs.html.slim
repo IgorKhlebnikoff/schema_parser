@@ -1,0 +1,24 @@
+.diffs.col-md-4
+  - if @parsing.diffs_in_tables?
+    .row
+      .col-md-4
+        h5 Diffs in existing tables
+    - @parsing.existing_tables_columns_diff.each do |diff|
+      - diff.each do |table, columns|
+        = render 'diff', table: table, columns: columns
+
+  - if @parsing.diffs_in_schema?
+    .row
+      .col-md-4
+        h5 Tables present in Schema and absent in XML
+    - @parsing.diff_tables_in_schema.each do |diff|
+      - diff.each do |table, columns|
+        = render 'diff', table: table, columns: columns
+
+  - if @parsing.diffs_in_xml?
+    .row
+      .col-md-4
+        h5 Tables present in XML and absent in Schema
+    - @parsing.diff_tables_in_xml.each do |diff|
+      - diff.each do |table, columns|
+        = render 'diff', table: table, columns: columns

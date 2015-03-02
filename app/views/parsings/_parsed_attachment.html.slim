@@ -1,0 +1,10 @@
+.col-md-4
+  - collection.each do |table, columns|
+    .row
+      .col-md-4
+        h5= table
+    .row
+      .col-md-4
+        ul
+          - columns.each do |column|
+            li= column
