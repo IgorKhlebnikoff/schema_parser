@@ -6,6 +6,7 @@ class Parsing < ActiveRecord::Base
   validates_attachment_content_type :schema_attachment, content_type: 'text/plain'
   validates_attachment_content_type :xml_attachment, content_type: /xml/
 
+
   serialize :snapshot, Hash
 
   def parse!

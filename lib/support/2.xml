@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<active_admin_comments  active_admin_comments="active_admin_comments">
+<resource_id>resource_id</resource_id>
+<resource_type>resource_type</resource_type>
+<author_id>author_id</author_id>
+<author_type>author_type</author_type>
+<body>body</body>
+<created_at>created_at</created_at>
+<updated_at>updated_at</updated_at>
+<namespace>namespace</namespace>
+<first_column>first_column</first_column>
+<second_column>second_column</second_column>
+</active_admin_comments>
