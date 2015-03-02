@@ -1,2 +1,4 @@
 log/development.log
 log/test.log
+/public/system/*
+lib/support/2.xml~
