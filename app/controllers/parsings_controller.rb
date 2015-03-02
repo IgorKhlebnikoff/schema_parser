@@ -21,7 +21,7 @@ class ParsingsController < ApplicationController
   end
 
   def parse
-    respond_with(parsing.parse, location: parsing_path(parsing))
+    respond_with(@parsing = parsing.parse, location: parsing_path(parsing))
   end
 
   private

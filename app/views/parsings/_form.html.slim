@@ -1,4 +1,9 @@
 = form_for @parsing do |f|
+  - if @parsing.errors.any?
+    div
+      ul
+        - @parsing.errors.full_messages.each do |message|
+          li = message
   .row
     .col-md-2= f.label :name
     .col-md-6= f.text_field :name
